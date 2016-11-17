@@ -1,14 +1,16 @@
 :root {
   --color-black: #272727;
+  --color-blue: #09c2c2;
   --color-pink: #ea65c0;
   --color-yellow: #fedf00;
+  --color-white: #ffffff;
   --font-huge: 11rem;
-  --font-big: 5rem;
-  --font-large: 4.5rem;
+  --font-big: 4.5rem;
   --font-normal: 3.5rem;
+  --section-margin: 20rem;
 }
 
-* {
+* { /* stylelint-disable-line */
   box-sizing: border-box;
 }
 
@@ -25,52 +27,65 @@ html {
 }
 
 body {
-  font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-}
-
-a.link {
-  font-size: var(--font-normal);
   color: var(--color-black);
-  text-decoration: underline;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: var(--font-normal);
 }
 
-a.link:hover {
+/* general purpose */
+
+p {
+  margin: 0;
+}
+
+h2 {
+  color: var(--color-blue);
+}
+
+h3 {
+  opacity: .6;
+}
+
+a {
+  border-bottom: .5rem solid var(--color-black);
+  border-bottom: .5rem solid rgba(40, 40, 40, .7);
+  color: var(--color-black);
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
+  transition: all .5s;
+}
+
+a:hover {
+  border-bottom: .5rem solid var(--color-blue);
+}
+
+.quote {
+  margin-top: 10rem;
+}
+
+.quote span {
   background-color: var(--color-black);
   color: var(--color-pink);
-  text-decoration: none;
+  font-size: var(--font-big);
+  font-weight: bold;
+  padding: 0 1rem;
 }
 
-li {
-  list-style: none;
+.emphasis {
+  color: var(--color-pink);
+  font-weight: bold;
 }
 
-.header {
-  display: block;
-  position: relative;
-  z-index: 20;
-}
+/* page styling */
 
-.header .menu {
-  display: flex;
-  justify-content: flex-end;
-  margin: 4rem;
-}
-
-.header .menu a {
-  color: var(--color-black);
-  font-size: var(--font-normal);
-}
-
-.header .menu a:hover {
-  color: var(--color-yellow);
-}
+/* landing */
 
 .landing {
-  border: 3rem solid var(--color-yellow);
+  border: 4rem solid var(--color-yellow);
   height: 100vh;
   left: 0;
   margin: 0;
-  position: absolute;
   top: 0;
   width: 100vw;
 }
@@ -78,8 +93,10 @@ li {
 .landing-content {
   align-items: center;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  height: 100vh;
+  justify-content: center;
+  margin-top: -4rem;
 }
 
 .landing_image {
@@ -89,38 +106,158 @@ li {
   max-width: 560px;
   width: auto;
 }
+
 .landing_text p {
-  margin: 0rem;
+  color: var(--color-white);
+  font-size: 8rem;
+  font-weight: bold;
+  margin: 1rem 0;
   text-transform: uppercase;
 }
 
-/* INFO: I know this can be accomplished with nth-child() selector, but I found it is harder to keep track of which portion of the text you're styling. I'll admit this looks kind of messy though.*/
-.landing_text-name {
-  font-size: 9.1rem;
-  margin: inherit;
+p.landing_text-president {
+  font-size: 3rem;
+  margin-bottom: 0;
 }
 
-.landing_text-the {
-  font-size: 15.4rem;
-  margin: inherit;
+p.landing_text-name {
+  margin-bottom: 5rem;
+  margin-top: 0;
 }
 
-.landing_text-best {
-  margin: inherit;
-  font-size: 12rem;
+.landing_text span {
+  background-color: var(--color-black);
 }
 
-.landing_text-ducking {
-  margin: inherit;
-  font-size: 6.3rem;
+span.landing_text-name_point {
+  background-color: var(--color-white);
+  color: var(--color-blue);
+  margin-left: -2rem;
 }
 
-.landing_text-president {
-  margin: inherit;
-  font-size: 5.2rem;
+/* intro */
+
+.intro {
+  margin-top: var(--section-margin);
 }
 
-.landing_text-ever {
-  margin: inherit;
-  font-size: 12rem;
+.intro_text {
+  max-width: 570px;
+}
+
+.intro_title {
+  font-size: var(--font-huge);
+  font-weight: bold;
+  margin-top: -20rem;
+  text-align: right;
+}
+
+.intro_title p:last-child {
+  font-size: var(--font-normal);
+}
+
+.intro_title span {
+  background-color: var(--color-black);
+  color: var(--color-pink);
+  padding: 0 1rem;
+}
+
+/* segue */
+
+.segue {
+  margin-top: var(--section-margin);
+}
+
+.segue p {
+  font-weight: bold;
+  text-align: center;
+}
+
+.arrow_down {
+  border-left: 10rem solid transparent;
+  border-right: 10rem solid transparent;
+  border-top: 5rem solid var(--color-yellow);
+  height: 0;
+  margin-top: 1rem;
+  width: 0;
+}
+
+/* issue 1 */
+
+.issue_one {
+  margin-top: var(--section-margin);
+}
+
+.issue_one-content {
+  align-content: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.issue_one-content_text {
+  margin-left: 5rem;
+}
+
+.issue_one-content_text h2 {
+  margin: 0;
+}
+
+.issue_one-content_text p {
+  margin-top: 2rem;
+  max-width: 60rem;
+}
+
+.issue_one .issue_one-content_quote {
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+/* issue 2 */
+
+.issue_two {
+  margin-top: var(--section-margin);
+}
+
+.issue_two .quote span {
+  padding: 1rem;
+}
+
+.issue_two .quote span:nth-last-child(2), .issue_two .quote span:last-child {
+  color: var(--color-white);
+}
+
+/* issue_three */
+
+.issue_three {
+  margin-top: var(--section-margin);
+}
+
+.issue_three-content {
+  align-content: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.issue_three .quote span:last-child {
+  color: var(--color-white);
+}
+
+/* footer */
+
+.footer {
+  align-items: center;
+  background-color: var(--color-yellow);
+  display: flex;
+  height: 40rem;
+  justify-content: center;
+  margin-top: var(--section-margin);
+}
+
+.footer_content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_content .links:last-child {
+  margin-left: 48rem;
 }

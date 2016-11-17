@@ -23,7 +23,7 @@
     "rule-nested-empty-line-before": "always",
     "selector-list-comma-newline-after": null,
     "selector-no-id": true,
-    "selector-no-qualifying-type": [true, {"ignore": "attribute"}],
+    "selector-no-qualifying-type": [true, {"ignore": ["attribute", "class"]}],
     "selector-no-universal": true,
     "selector-no-vendor-prefix": true,
     "string-quotes": "single",
