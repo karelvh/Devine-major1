@@ -1,0 +1,126 @@
+:root {
+  --color-black: #272727;
+  --color-pink: #ea65c0;
+  --color-yellow: #fedf00;
+  --font-huge: 11rem;
+  --font-big: 5rem;
+  --font-large: 4.5rem;
+  --font-normal: 3.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.width-960 {
+  max-width: 960px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+a.link {
+  font-size: var(--font-normal);
+  color: var(--color-black);
+  text-decoration: underline;
+}
+
+a.link:hover {
+  background-color: var(--color-black);
+  color: var(--color-pink);
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.header {
+  display: block;
+  position: relative;
+  z-index: 20;
+}
+
+.header .menu {
+  display: flex;
+  justify-content: flex-end;
+  margin: 4rem;
+}
+
+.header .menu a {
+  color: var(--color-black);
+  font-size: var(--font-normal);
+}
+
+.header .menu a:hover {
+  color: var(--color-yellow);
+}
+
+.landing {
+  border: 3rem solid var(--color-yellow);
+  height: 100vh;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+}
+
+.landing-content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.landing_image {
+  display: block;
+  height: auto;
+  max-height: 657px;
+  max-width: 560px;
+  width: auto;
+}
+.landing_text p {
+  margin: 0rem;
+  text-transform: uppercase;
+}
+
+/* INFO: I know this can be accomplished with nth-child() selector, but I found it is harder to keep track of which portion of the text you're styling. I'll admit this looks kind of messy though.*/
+.landing_text-name {
+  font-size: 9.1rem;
+  margin: inherit;
+}
+
+.landing_text-the {
+  font-size: 15.4rem;
+  margin: inherit;
+}
+
+.landing_text-best {
+  margin: inherit;
+  font-size: 12rem;
+}
+
+.landing_text-ducking {
+  margin: inherit;
+  font-size: 6.3rem;
+}
+
+.landing_text-president {
+  margin: inherit;
+  font-size: 5.2rem;
+}
+
+.landing_text-ever {
+  margin: inherit;
+  font-size: 12rem;
+}
