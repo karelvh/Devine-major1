@@ -40,10 +40,12 @@ p {
 
 h2 {
   color: var(--color-blue);
+  margin-top: 0;
 }
 
 h3 {
   opacity: .6;
+  margin-bottom: 1.5rem;
 }
 
 a {
@@ -51,7 +53,7 @@ a {
   border-bottom: .5rem solid rgba(40, 40, 40, .7);
   color: var(--color-black);
   display: inline-block;
-  margin-top: 2rem;
+  margin: 0 2rem;
   text-decoration: none;
   transition: all .5s;
 }
@@ -248,16 +250,25 @@ span.landing_text-name_point {
   align-items: center;
   background-color: var(--color-yellow);
   display: flex;
-  height: 40rem;
+  height: 20rem;
   justify-content: center;
   margin-top: var(--section-margin);
 }
 
 .footer_content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.footer_content .links:last-child {
-  margin-left: 48rem;
+.footer_content a {
+  font-size: 2.7rem;
+  margin: 2rem 4rem;
+}
+
+@media (max-width: 959px) {
+
+  html {
+    font-size: 32.5%;
+  }
 }
