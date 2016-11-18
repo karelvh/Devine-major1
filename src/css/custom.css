@@ -240,6 +240,11 @@ span.landing_text-name_point {
   justify-content: space-between;
 }
 
+.issue_three-content video {
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
 .issue_three .quote span:last-child {
   color: var(--color-white);
 }
