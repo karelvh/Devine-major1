@@ -31,7 +31,7 @@ const copy = new CopyWebpackPlugin([
   },
   {
     context: './src/assets/',
-    from: '**/*.+(png|webp|gif|jpe?g|json|mp4)',
+    from: '**/*.+(png|webp|gif|jpe?g|json|mp4|ico)',
     to: 'assets',
   },
 ], {
